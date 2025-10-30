@@ -1,0 +1,85 @@
+/* Minimal, humane palette */
+:root{
+  --bg: #FAF9F6;          /* warm white */
+  --paper: #FFFFFF;
+  --ink: #111111;         /* near-black */
+  --muted: #666666;
+  --line: #CFCFCF;        /* pencil grey */
+  --accent: #B4C3B1;      /* soft sage */
+  --accent-ink:#1E2A1F;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.container {
+  max-width: 880px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(to bottom, #ffffff80, #ffffff30);
+  backdrop-filter: blur(3px);
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-right: 1rem;
+  border-bottom: 1px solid transparent;
+}
+nav a:hover { border-bottom-color: var(--accent); color: var(--ink); }
+
+h1, h2, h3 {
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  line-height: 1.25;
+  color: var(--ink);
+  letter-spacing: 0.2px;
+}
+h1 { font-size: 2.4rem; margin-top: 0; }
+h2 { font-size: 1.6rem; margin-top: 2rem; }
+h3 { font-size: 1.2rem; margin-top: 1.5rem; }
+
+.tagline {
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.lede { color: var(--muted); max-width: 60ch; }
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin: 0.75rem 0;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: #fff;
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}

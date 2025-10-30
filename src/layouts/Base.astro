@@ -1,0 +1,42 @@
+---
+const { title = "hexagons are best", description = "architecture is choice. systems are stories.", pageClass = "" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class={pageClass}>
+    <header class="site">
+      <div class="container" style="display:flex;align-items:center;gap:1rem;justify-content:space-between;">
+        <a href="/" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;color:inherit;">
+          <svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M60 14 94 34v40L60 94 26 74V34z" fill="none" stroke="#111111" stroke-width="6"/>
+          </svg>
+          <strong style="letter-spacing:0.4px">hexagons are best</strong>
+        </a>
+        <nav>
+          <a href="/garden">garden</a>
+          <a href="/projects">projects</a>
+          <a href="/about">about</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div>© {new Date().getFullYear()} Murphy‑Mae • built with Astro • <span class="pill">kind systems</span></div>
+      </div>
+    </footer>
+  </body>
+</html>

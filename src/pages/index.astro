@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+const title = "hexagons are best";
+const description = "architecture is choice. systems are stories. this is where i learn in public.";
+---
+<Base {title} {description}>
+  <h1 class="tagline">hexagons are best.</h1>
+  <p class="lede">architecture is choice. systems are stories. this is where i learn in public.</p>
+
+  <div class="card">
+    <h2>what you'll find here</h2>
+    <ul>
+      <li><strong>garden notes:</strong> evolving ideas on DDD, IAM, socio‑technical design</li>
+      <li><strong>experiments:</strong> small demos, code spikes, sketches</li>
+      <li><strong>essays:</strong> humane architecture, capability thinking, leadership</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>start here</h2>
+    <p>Visit the <a href="/garden">garden</a> for living notes, or <a href="/projects">projects</a> for code and demos.</p>
+  </div>
+</Base>
