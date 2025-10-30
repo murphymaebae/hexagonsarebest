@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Base.astro
+layout: ../../layouts/Base.astro
 title: garden — hexagons are best
 description: living notes; rough, honest, evolving.
 ---

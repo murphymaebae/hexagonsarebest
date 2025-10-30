@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Base.astro
+layout: ../../layouts/Base.astro
 title: iam convergence
 description: fragmented platforms towards a kinder, simpler whole.
 ---

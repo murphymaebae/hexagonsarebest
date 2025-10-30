@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Base.astro
+layout: ../../layouts/Base.astro
 title: ddd shapes
 description: metaphors & visuals that make domains click.
 ---
