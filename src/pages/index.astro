@@ -4,20 +4,38 @@ const title = "Hexagons are best";
 const description = "Architecture should be the language of simplicity. This is where I learn in public.";
 ---
 <Base {title} {description}>
-  <h1 class="tagline">{title}</h1>
-  <p class="lede">{description}</p>
+  <section class="hero">
+    <p class="eyebrow">kind systems, deliberate design</p>
+    <h1 class="tagline">{title}</h1>
+    <p class="lede">{description}</p>
+    <div class="cta-links">
+      <a class="cta primary" href="/garden">explore the garden</a>
+      <a class="cta ghost" href="/projects">see the projects</a>
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>what you'll find here</h2>
-    <ul>
-      <li><strong>garden notes:</strong> evolving ideas on DDD, Clean Edge Architectures & Socio‑technical Designs</li>
-      <li><strong>experiments:</strong> small demos, code spikes & sketches</li>
-      <li><strong>essays:</strong> human architecture, capability thinking, leadership</li>
-    </ul>
-  </div>
+  <section class="info-grid">
+    <article class="card">
+      <h2>what you'll find here</h2>
+      <ul class="list">
+        <li><strong>garden notes</strong> — evolving ideas on DDD, Clean Edge Architectures & socio‑technical design</li>
+        <li><strong>experiments</strong> — small demos, code spikes & sketches</li>
+        <li><strong>essays</strong> — human architecture, capability thinking, leadership</li>
+      </ul>
+    </article>
 
-  <div class="card">
+    <article class="card" data-tone="sage">
+      <h2>how I practice</h2>
+      <ul class="list">
+        <li>start with the people affected by the system</li>
+        <li>shape architecture as a shared language, not a diagram</li>
+        <li>prefer humane defaults, minimal surfaces and sustainable pace</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="card callout" data-tone="sunset">
     <h2>start here</h2>
-    <p>Visit the <a href="/garden">garden</a> for living notes, or <a href="/projects">projects</a> for code and demos.</p>
-  </div>
+    <p>Begin with the living <a href="/garden">garden</a> to follow the latest notes, then wander over to <a href="/projects">projects</a> for code and demos. If you're curious about the person behind the work, the <a href="/about">about</a> page has the backstory.</p>
+  </section>
 </Base>
