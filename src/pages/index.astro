@@ -4,20 +4,73 @@ const title = "Hexagons are best";
 const description = "Architecture should be the language of simplicity. This is where I learn in public.";
 ---
 <Base {title} {description}>
-  <h1 class="tagline">{title}</h1>
-  <p class="lede">{description}</p>
+  <section class="hero">
+    <div class="hero-intro">
+      <p class="eyebrow">kind systems, deliberate design</p>
+      <h1 class="tagline">{title}</h1>
+      <p class="lede">
+        {description} Grounded in socio-technical thinking, this studio explores how software, teams, and people grow together.
+      </p>
+      <div class="cta-row">
+        <a class="cta primary" href="/garden">browse the garden</a>
+        <a class="cta secondary" href="/projects">see the projects</a>
+        <a class="text-link" href="/about">learn about the studio</a>
+      </div>
+    </div>
+    <aside class="hero-panel">
+      <div class="panel-card">
+        <h2>studio motifs</h2>
+        <ul>
+          <li>architectures that feel lived-in</li>
+          <li>interfaces with humane defaults</li>
+          <li>strategy that stays conversational</li>
+        </ul>
+        <p class="panel-note">Currently sketching capability maps & propagation patterns for small teams.</p>
+      </div>
+    </aside>
+  </section>
 
-  <div class="card">
-    <h2>what you'll find here</h2>
-    <ul>
-      <li><strong>garden notes:</strong> evolving ideas on DDD, Clean Edge Architectures & Socio‑technical Designs</li>
-      <li><strong>experiments:</strong> small demos, code spikes & sketches</li>
-      <li><strong>essays:</strong> human architecture, capability thinking, leadership</li>
-    </ul>
-  </div>
+  <section class="story-grid">
+    <article class="story-card" data-tone="flora">
+      <h2>gardening the work</h2>
+      <p>
+        Notes arrive as seedlings before they grow into essays. Follow the changelog of experiments, references, and futures-in-progress.
+      </p>
+      <a class="pill-link" href="/garden">enter the garden →</a>
+    </article>
+    <article class="story-card" data-tone="sand">
+      <h2>projects & prototypes</h2>
+      <p>
+        From facilitation tools to architecture sketches, these are the tangible artifacts made to practice humane, hexagonal thinking.
+      </p>
+      <a class="pill-link" href="/projects">tour the projects →</a>
+    </article>
+    <article class="story-card" data-tone="ink">
+      <h2>about murphy-mae</h2>
+      <p>
+        Longform reflections on leading teams, working across domains, and building systems that stay kind at scale.
+      </p>
+      <a class="pill-link" href="/about">read the backstory →</a>
+    </article>
+  </section>
 
-  <div class="card">
-    <h2>start here</h2>
-    <p>Visit the <a href="/garden">garden</a> for living notes, or <a href="/projects">projects</a> for code and demos.</p>
-  </div>
+  <section class="studio-callout">
+    <div class="callout-card">
+      <h2>Currently exploring</h2>
+      <div class="callout-content">
+        <div class="callout-item">
+          <span class="callout-label">research</span>
+          <p>Story-driven architecture practices for product teams navigating complexity.</p>
+        </div>
+        <div class="callout-item">
+          <span class="callout-label">practice</span>
+          <p>Wardley mapping, capability modeling, and facilitation rhythms for healthy systems.</p>
+        </div>
+        <div class="callout-item">
+          <span class="callout-label">sharing</span>
+          <p>Workshops, essays, and open notes for people who prefer thoughtful, slower internet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>
