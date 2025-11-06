@@ -4,20 +4,70 @@ const title = "Hexagons are best";
 const description = "Architecture should be the language of simplicity. This is where I learn in public.";
 ---
 <Base {title} {description}>
-  <h1 class="tagline">{title}</h1>
-  <p class="lede">{description}</p>
+  <section class="hero">
+    <div class="hero__intro">
+      <p class="hero__eyebrow">kind systems, deliberate design</p>
+      <h1 class="hero__title">{title}</h1>
+      <p class="hero__lede">{description}</p>
+      <div class="hero__actions">
+        <a class="button button--solid" href="/garden">enter the garden</a>
+        <a class="button button--outline" href="/projects">browse the projects</a>
+      </div>
+    </div>
+    <aside class="hero__card">
+      <h2>current study</h2>
+      <p>Quiet infrastructures for teams learning together. Patterns for spacious governance, modular domains and humane defaults.</p>
+      <a class="chip" href="/garden">follow the working notes</a>
+    </aside>
+  </section>
 
-  <div class="card">
-    <h2>what you'll find here</h2>
-    <ul>
-      <li><strong>garden notes:</strong> evolving ideas on DDD, Clean Edge Architectures & Socio‑technical Designs</li>
-      <li><strong>experiments:</strong> small demos, code spikes & sketches</li>
-      <li><strong>essays:</strong> human architecture, capability thinking, leadership</li>
-    </ul>
-  </div>
+  <section class="threads">
+    <article class="thread">
+      <h2>garden notes</h2>
+      <p>Living documents on socio-technical design, capability mapping, and the rituals that keep architecture soft and adaptable.</p>
+      <a href="/garden" class="thread__link">read the latest</a>
+    </article>
+    <article class="thread">
+      <h2>practice log</h2>
+      <p>Small experiments in tooling, facilitation moves, and code sketches that test the edges of the craft.</p>
+      <a href="/projects" class="thread__link">open the log</a>
+    </article>
+    <article class="thread">
+      <h2>about murphy-mae</h2>
+      <p>The story, the values, and the collaborators that shape this studio of one. Introspective and honest.</p>
+      <a href="/about" class="thread__link">get acquainted</a>
+    </article>
+  </section>
 
-  <div class="card">
-    <h2>start here</h2>
-    <p>Visit the <a href="/garden">garden</a> for living notes, or <a href="/projects">projects</a> for code and demos.</p>
-  </div>
+  <section class="palette">
+    <header class="palette__header">
+      <h2>palette & mood</h2>
+      <p>Soft greens, charcoal ink, and diffused light inspired by Reseda’s fluid calm.</p>
+    </header>
+    <div class="swatches">
+      <div class="swatch" data-tone="dew">
+        <span class="swatch__label">dew</span>
+        <span class="swatch__value">#EEF1EB</span>
+      </div>
+      <div class="swatch" data-tone="fern">
+        <span class="swatch__label">fern</span>
+        <span class="swatch__value">#B8C9B3</span>
+      </div>
+      <div class="swatch" data-tone="charcoal">
+        <span class="swatch__label">charcoal</span>
+        <span class="swatch__value">#1C1C1A</span>
+      </div>
+      <div class="swatch" data-tone="light">
+        <span class="swatch__label">light</span>
+        <span class="swatch__value">#FBF9F4</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="closing__content">
+      <h2>start here</h2>
+      <p>Begin with the <a href="/garden">garden</a> to see ideas as they grow. Wander into <a href="/projects">projects</a> for the tangible artefacts. When you’re ready to connect, the <a href="/about">about</a> page brings the story together.</p>
+    </div>
+  </section>
 </Base>
