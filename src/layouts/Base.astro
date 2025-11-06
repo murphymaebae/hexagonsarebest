@@ -12,16 +12,21 @@ import "../styles/global.css";
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body class={pageClass}>
-    <header class="site">
-      <div class="container" style="display:flex;align-items:center;gap:1rem;justify-content:space-between;">
-        <a href="/" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;color:inherit;">
-          <svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M60 14 94 34v40L60 94 26 74V34z" fill="none" stroke="#111111" stroke-width="6"/>
-          </svg>
-          <strong style="letter-spacing:0.4px">hexagons are best</strong>
+  <body class={`site-shell ${pageClass}`.trim()}>
+    <header class="masthead">
+      <div class="container masthead__inner">
+        <a class="masthead__brand" href="/">
+          <span class="masthead__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 120 120" role="presentation" focusable="false">
+              <path d="M60 14 94 34v40L60 94 26 74V34z" fill="none" stroke-width="6" />
+            </svg>
+          </span>
+          <span class="masthead__label">
+            <span>hexagons are best</span>
+            <span class="masthead__sublabel">architecture as soft infrastructure</span>
+          </span>
         </a>
-        <nav>
+        <nav class="masthead__nav" aria-label="Primary">
           <a href="/garden">garden</a>
           <a href="/projects">projects</a>
           <a href="/about">about</a>
@@ -33,9 +38,10 @@ import "../styles/global.css";
         <slot />
       </div>
     </main>
-    <footer>
-      <div class="container">
-        <div>© {new Date().getFullYear()} Murphy‑Mae • built with Astro • <span class="pill">kind systems</span></div>
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© {new Date().getFullYear()} Murphy‑Mae</div>
+        <div class="footer__meta">built with Astro · <span class="pill">kind systems</span></div>
       </div>
     </footer>
   </body>
