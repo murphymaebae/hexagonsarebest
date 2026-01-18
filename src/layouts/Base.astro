@@ -12,8 +12,24 @@ import Navbar from "../components/Navbar.astro";
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body class={pageClass}>
-    <Navbar />
+  <body class={`site-shell ${pageClass}`.trim()}>
+    <header class="site">
+      <div class="container site-bar">
+        <a class="brand" href="/">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 120 120" role="presentation" focusable="false">
+              <path d="M60 14 94 34v40L60 94 26 74V34z" fill="none" stroke-width="6" />
+            </svg>
+          </span>
+          <span class="brand-text">hexagons are best</span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="/garden">garden</a>
+          <a href="/projects">projects</a>
+          <a href="/about">about</a>
+        </nav>
+      </div>
+    </header>
     <main>
       <slot />
     </main>
