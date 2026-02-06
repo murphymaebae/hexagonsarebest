@@ -1,36 +1,17 @@
-:root {
-  --canvas: #f8f5ef;
-  --canvas-muted: #efe8dc;
-  --canvas-deep: #0f1d1c;
-  --surface: rgba(255, 255, 255, 0.85);
-  --surface-strong: #ffffff;
-  --ink: #102221;
-  --ink-soft: #3c4f4d;
-  --ink-muted: rgba(60, 79, 77, 0.72);
-  --accent: #2e7d72;
-  --accent-soft: rgba(46, 125, 114, 0.18);
-  --accent-bright: #7ef2c2;
-  --gold: #c9a969;
-  --flora: #d9f3df;
-  --sand: #f5e8d0;
-  --ink-card: rgba(16, 34, 33, 0.9);
-  --stroke: rgba(16, 34, 33, 0.12);
-  --stroke-strong: rgba(16, 34, 33, 0.25);
-  --shadow-soft: 0 28px 60px -32px rgba(8, 24, 23, 0.35);
-  --shadow-strong: 0 40px 80px -42px rgba(8, 24, 23, 0.55);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-::selection {
-  background: var(--accent);
-  color: white;
+/* Minimal, humane palette */
+:root{
+  --bg: #FAF9F6;          /* warm white */
+  --paper: #FFFFFF;
+  --ink: #111111;         /* near-black */
+  --muted: #666666;
+  --line: #CFCFCF;        /* pencil grey */
+  --accent: #B4C3B1;      /* soft sage */
+  --accent-ink:#1E2A1F;
 }
 
 html,
 body {
+  padding: 0;
   margin: 0;
   padding: 0;
   min-height: 100%;
@@ -73,6 +54,7 @@ a:focus-visible::after {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.66) 32%, rgba(248, 245, 239, 0.82) 100%);
 }
 
+/* Utility Classes */
 .container {
   width: min(1120px, 92vw);
   margin: 0 auto;
@@ -434,43 +416,4 @@ footer .container {
   padding-block: clamp(1rem, 2vw, 1.8rem);
   color: var(--ink-muted);
   font-size: 0.9rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.15rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(16, 34, 33, 0.08);
-  color: var(--ink);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-@media (max-width: 720px) {
-  .site-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .primary-nav {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .story-grid {
-    gap: 1.4rem;
-  }
-
-  footer .container {
-    justify-content: center;
-    text-align: center;
-  }
 }
