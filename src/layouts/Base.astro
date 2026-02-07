@@ -1,5 +1,9 @@
 ---
-const { title = "hexagons are best", description = "architecture is choice. systems are stories.", pageClass = "" } = Astro.props;
+const {
+  title = "hexagons are best",
+  description = "architecture is choice. systems are stories.",
+  pageClass = "",
+} = Astro.props;
 import "../styles/global.css";
 const pathname = Astro.url.pathname;
 const isActive = (href) => pathname === href || pathname.startsWith(`${href}/`);
