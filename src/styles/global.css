@@ -1,17 +1,27 @@
-/* Minimal, humane palette */
-:root{
-  --bg: #FAF9F6;          /* warm white */
-  --paper: #FFFFFF;
-  --ink: #111111;         /* near-black */
-  --muted: #666666;
-  --line: #CFCFCF;        /* pencil grey */
-  --accent: #B4C3B1;      /* soft sage */
-  --accent-ink:#1E2A1F;
+:root {
+  --bg: #ecefeb;
+  --bg-deep: #dde4de;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #ffffff;
+  --ink: #1f2933;
+  --muted: #5f6c78;
+  --line: #c8d1d8;
+  --accent: #1f5f6b;
+  --accent-strong: #143f46;
+  --accent-soft: #d8e7e9;
+  --clay: #b86145;
+  --clay-soft: #f3e4df;
+  --shadow: 0 14px 40px rgba(31, 41, 51, 0.08);
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
-  padding: 0;
   margin: 0;
   padding: 0;
   min-height: 100%;
@@ -54,7 +64,6 @@ a:focus-visible::after {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.66) 32%, rgba(248, 245, 239, 0.82) 100%);
 }
 
-/* Utility Classes */
 .container {
   width: min(1120px, 92vw);
   margin: 0 auto;
