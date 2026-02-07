@@ -1,18 +1,30 @@
 ---
 const { title = "hexagons are best", description = "architecture is choice. systems are stories.", pageClass = "" } = Astro.props;
 import "../styles/global.css";
-import Navbar from "../components/Navbar.astro";
+const pathname = Astro.url.pathname;
+const isActive = (href) => pathname === href || pathname.startsWith(`${href}/`);
+const year = new Date().getFullYear();
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
   <body class={`site-shell ${pageClass}`.trim()}>
+    <div class="site-backdrop" aria-hidden="true">
+      <div class="site-orb orb-a"></div>
+      <div class="site-orb orb-b"></div>
+      <div class="site-grid"></div>
+    </div>
     <header class="site">
       <div class="container site-bar">
         <a class="brand" href="/">
@@ -24,14 +36,34 @@ import Navbar from "../components/Navbar.astro";
           <span class="brand-text">hexagons are best</span>
         </a>
         <nav class="primary-nav" aria-label="Primary">
+          <a class={isActive("/garden") ? "is-active" : ""} href="/garden">garden</a>
+          <a class={isActive("/projects") ? "is-active" : ""} href="/projects">projects</a>
+          <a class={isActive("/about") ? "is-active" : ""} href="/about">about</a>
+        </nav>
+      </div>
+    </header>
+    <main class="site-main">
+      <div class="container site-main-inner">
+        <slot />
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-bar">
+        <a class="brand brand-footer" href="/">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 120 120" role="presentation" focusable="false">
+              <path d="M60 14 94 34v40L60 94 26 74V34z" fill="none" stroke-width="6" />
+            </svg>
+          </span>
+          <span class="brand-text">hexagons are best</span>
+        </a>
+        <nav class="footer-nav" aria-label="Footer">
           <a href="/garden">garden</a>
           <a href="/projects">projects</a>
           <a href="/about">about</a>
         </nav>
+        <p class="footer-meta">© {year}</p>
       </div>
-    </header>
-    <main>
-      <slot />
-    </main>
+    </footer>
   </body>
 </html>
